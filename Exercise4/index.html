@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Mandaic&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Special+Gothic&family=Sriracha&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise4</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img class="logo" src="images/Pokemon-Logo-1998.png">
+      </div>
+    </header>
+    <nav>
+      <section class="nav-container">
+        <div class="option">
+          <label for="typeSelect">Type</label>
+          <select id="typeSelect" name="Type">
+            <option value="Fire">Fire</option>
+            <option value="Water">Water</option>
+            <option value="Electric">Electric</option>
+            <option value="Grass">Grass</option>
+            <option value="Ice">Ice</option>
+          </select>
+        </div>
+        <div class="option">
+          <label for="captureSelect">Captured</label>
+          <select id="captureSelect" name="Captured">
+            <option value="Any">Any</option>
+            <option value="Captured">Captured</option>
+            <option value="Not Captured">Not Captured</option>
+          </select>
+        </div>
+      </section>
+    </nav>
+    <main>
+      <section class="pokemon-container">
+        <div class="pokemon-list" id="charmender">
+          <p>25</p>
+          <img src="images/Charmender.png">
+          <h1>Charmender</h1>
+          <h2>Fire</h2>
+          <div class="switch-container">
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <span class="switch-text">Captured</span>
+          </div>
+        </div>
+        <div class="pokemon-list" id="Psyduck">
+          <p>26</p>
+          <img src="images/Psyduck.jpg">
+          <h1>Psyduck</h1>
+          <h2>Water</h2>
+          <div class="switch-container">
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <span class="switch-text">Captured</span>
+          </div>
+        </div>
+        <div class="pokemon-list" id="Pikachu">
+          <p>81</p>
+          <img src="images/Pikachu.png">
+          <h1>Pikachu</h1>
+          <h2>Electric</h2>
+          <div class="switch-container">
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <span class="switch-text">Captured</span>
+          </div>
+        </div>
+        <div class="pokemon-list" id="Jumpluff">
+          <p>82</p>
+          <img src="images/Jumpluff.png">
+          <h1>Jumpluff</h1>
+          <h2>Grass</h2>
+          <div class="switch-container">
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <span class="switch-text">Captured</span>
+          </div>
+        </div>
+        <div class="pokemon-list" id="cBeartic">
+          <p>100</p>
+          <img src="images/Beartic.png">
+          <h1>Beartic</h1>
+          <h2>Ice</h2>
+          <div class="switch-container">
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <span class="switch-text">Captured</span>
+          </div>
+        </div>
+        <div class="pokemon-list" id="Chien-Pao">
+          <p>101</p>
+          <img src="images/Chien-Pao.jpg">
+          <h1>Chien-Pao</h1>
+          <h2>Ice</h2>
+          <div class="switch-container">
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <span class="switch-text">Captured</span>
+          </div>
+        </div>
+        <div class="pokemon-list" id="Suicune">
+          <p>125</p>
+          <img src="images/Suicune.png">
+          <h1>Suicune</h1>
+          <h2>Water</h2>
+          <div class="switch-container">
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <span class="switch-text">Captured</span>
+          </div>
+        </div>
+        <div class="pokemon-list" id="Typhlosion">
+          <p>126</p>
+          <img src="images/Typhlosion.png">
+          <h1>Typhlosion</h1>
+          <h2>Fire</h2>
+          <div class="switch-container">
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <span class="switch-text">Captured</span>
+          </div>
+        </div>
+        <div class="pokemon-list" id="Eelektross">
+          <p>135</p>
+          <img src="images/eelektross.png">
+          <h1>Eelektross</h1>
+          <h2>Electric</h2>
+          <div class="switch-container">
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <span class="switch-text">Captured</span>
+          </div>
+        </div>
+        <div class="pokemon-list" id="Breloom">
+          <p>136</p>
+          <img src="images/Breloom.jpg">
+          <h1>Breloom</h1>
+          <h2>Grass</h2>
+          <div class="switch-container">
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <span class="switch-text">Captured</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
