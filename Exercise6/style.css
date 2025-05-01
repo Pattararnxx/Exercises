@@ -27,7 +27,7 @@ body {
     cursor: pointer;
     display: none;
 }
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 950px) {
     nav .menu,
     nav .right-content-bar {
         display: none !important;
@@ -134,8 +134,14 @@ body {
         padding: 50px;
     }
 }
+.accordion-toggle{
+    display: none;
+}
+.accordion-icon{
+    display:none;
+}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
     section {
         margin-inline: 0;
         margin-block-start: 10px;
@@ -147,8 +153,55 @@ body {
 
     .footer-content-2 {
         flex-direction: column;
-        padding: 20px;
+        padding: 0;
     }
+
+    .accordion-item {
+        border-bottom: 1px solid var(--line-color);
+        width: 100%;
+    }
+
+    .accordion-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        cursor: pointer;
+        background-color: var(--background-color);
+    }
+
+    .accordion-header h2 {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .accordion-icon {
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        transition: transform 0.3s ease;
+    }
+    .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        padding: 0 15px;
+    }
+
+    .accordion-toggle:checked + .accordion-header .accordion-icon {
+        transform: rotate(45deg);
+    }
+
+    .accordion-toggle:checked + .accordion-header + .accordion-content {
+        max-height: 500px;
+        padding-bottom: 15px;
+    }
+    .accordion-content a {
+        display: block;
+        padding: 8px 0;
+        margin: 0;
+    }
+
 }
 @media screen and (max-width: 480px) {
     .left-section-1, .right-section-2, .left-section-3 {
@@ -426,4 +479,5 @@ section{
         font-weight: 300;
     }
 }
+
 
