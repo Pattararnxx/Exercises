@@ -12,241 +12,263 @@
 </head>
 <body class="font-Biryani">
 <div class="relative overflow-hidden">
-  <img class="absolute inset-0 w-full h-full object-cover grayscale-60 brightness-20 z-0" src="images/bg.webp" alt="">
-  <div class="relative z-10">
-    <nav class="text-white">
-      <div class="flex justify-end mx-[60px] my-[20px] gap-[120px] font-[20px]">
-        <div class="flex items-center">
-          <img class="w-[30px] h-[30px] invert brightness-0" src="images/logo.png" alt="">
+  <img class="absolute inset-0 w-full h-full object-cover grayscale-[60%] brightness-[20%] z-0" src="images/bg.webp" alt="">
+
+  <div class="relative z-10 text-white">
+
+    <nav class="px-4 py-4 sm:px-8 md:px-[60px]">
+      <div class="flex flex-col sm:flex-row sm:justify-end sm:items-center gap-4 sm:gap-[120px] text-sm md:text-[20px] my-4">
+        <div class="flex items-center gap-2">
+          <img class="w-6 h-6 sm:w-[30px] sm:h-[30px] invert brightness-0" src="images/logo.png" alt="">
           <a href="#">Documentation</a>
         </div>
-        <div class="flex items-center">
-          <img class="w-[30px] h-[30px] invert brightness-0" src="images/logo.png" alt="">
+        <div class="flex items-center gap-2">
+          <img class="w-6 h-6 sm:w-[30px] sm:h-[30px] invert brightness-0" src="images/logo.png" alt="">
           <a href="#">Book Consultation</a>
         </div>
       </div>
-      <div class="flex justify-between items-center gap-[50px] py-[20px] border-t-[1px] border-b-[2px] border-gray-600">
-        <div class="flex items-center">
-          <img class="ml-[50px] w-[50px] h-[50px] invert brightness-0" src="images/logo.png" alt="">
-          <h1 class="font-medium text-[20px]">Sky Capital</h1>
+
+      <div class="border-t border-b border-gray-600 py-4 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+
+        <div class="flex items-center gap-2 md:ml-[20px]">
+          <img class="w-10 h-10 invert brightness-0" src="images/logo.png" alt="">
+          <h1 class="text-lg md:text-[20px] font-medium">Sky Capital</h1>
         </div>
-        <div class="flex items-center gap-[70px]">
+
+        <div class="flex flex-wrap gap-4 justify-center md:justify-end md:items-center md:gap-[30px] lg:gap-[70px] md:mr-[20px]">
           <a href="#">Our Company</a>
           <a href="#">Wealth Management</a>
           <a href="#">Advisory Solutions</a>
           <a href="#">Perspectives</a>
           <a href="#">Contact Us</a>
-          <button class="ml-[30px] mr-0 border-2 px-[40px] py-[10px]">Investor Access</button>
-          <button class="mr-[50px] border-2 border-white px-[40px] py-[10px] bg-white text-black">👤 Open Account</button>
+          <button class="border-2 px-6 py-2">Investor Access</button>
+          <button class="border-2 border-white bg-white text-black px-6 py-2">👤 Open Account</button>
         </div>
       </div>
     </nav>
 
-    <section class="flex justify-center items-center text-center mt-[80px] min-h-[80vh] text-white">
-      <div>
-        <div>
-          <h1 class="text-[100px] font-light">
-            Turning <span class="font-semibold">Today's Wealth</span> Into <br>
-            Tomorrow's Legacy
-          </h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, quos. Lorem ipsum .<br>
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-          </p>
+    <section class="flex justify-center items-center text-center mt-16 min-h-[80vh] px-4">
+      <div class="w-full max-w-4xl lg:max-w-6xl">
+        <h1 class="text-[36px] sm:text-[50px] lg:text-[90px] font-light leading-tight mx-auto">
+          Turning <span class="font-semibold">Today's Wealth</span> Into<br class="hidden sm:block">
+          Tomorrow's Legacy
+        </h1>
+        <p class="mt-4 text-sm sm:text-base">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, quos.<br>
+          Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6">
+          <button class="bg-white text-black px-6 py-2">Free Consultation</button>
+          <button class="border-2 border-gray-500 bg-gray-700 px-6 py-2">Open Account</button>
         </div>
-        <div class="flex justify-center mt-[30px]  gap-[30px]">
-          <button class="bg-white text-black px-[30px] py-[10px]">Free Consultation</button>
-          <button class="border-2 border-gray-500 bg-gray-700 px-[30px] py-[10px]">Open Account</button>
-        </div>
-        <div class="mt-[200px] font-bold text-2xl">↓</div>
+        <div class="mt-20 sm:mt-[100px] font-bold text-2xl">↓</div>
       </div>
     </section>
+
   </div>
 </div>
+
 <main>
-  <section class="flex flex-col px-[150px] bg-gray-100">
-    <div class="flex justify-between py-[100px] ">
-      <div>
-        <h2 class="font-light">OUR COMPANY</h2>
-        <h1 class="mb-[10px] leading-[1.2em] font-normal text-[70px] ">
+  <section class="flex flex-col px-4 sm:px-8 md:px-16 lg:px-[100px] xl:px-[150px] bg-gray-100">
+    <div class="flex flex-col lg:flex-row justify-between py-[60px] gap-10">
+      <div class="lg:w-2/3">
+        <h2 class="font-light text-sm md:text-base">OUR COMPANY</h2>
+        <h1 class="mb-4 leading-[1.2em] font-normal text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] xl:text-[70px]">
           Your Trusted Partner in<br>
           Wealth Management
         </h1>
-        <p class="text-gray-700 font-extralight mb-[30px]">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, quos. Lorem ipsum .<br>
+        <p class="text-gray-700 font-extralight mb-6 text-sm md:text-base leading-relaxed">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, quos. Lorem ipsum.<br>
           ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor.<br>
           consectetur adipisicing elit.
         </p>
-        <button class="border-2 border-gray-400 px-[20px] py-[10px]">Learn More About Our Story<span class="ml-[15px]">⮕</span></button>
+        <button class="border-2 border-gray-400 px-5 py-3 text-sm md:text-base">
+          Learn More About Our Story<span class="ml-3">⮕</span>
+        </button>
       </div>
-      <div class="flex flex-col mr-[30px] gap-[30px]">
+      <div class="flex flex-col gap-6 lg:mr-[30px]">
         <div>
-          <h1 class="font-normal text-[70px]">150+</h1>
-          <p class="text-gray-700 font-extralight leading-[0.5em] text-[20px]">Assets under management</p>
+          <h1 class="font-normal text-[40px] sm:text-[50px] md:text-[60px] lg:text-[70px]">150+</h1>
+          <p class="text-gray-700 font-extralight text-[16px] sm:text-[18px] md:text-[20px] leading-tight">Assets under management</p>
         </div>
         <div>
-          <h1 class="font-normal text-[70px]">10,000+</h1>
-          <p class="text-gray-700 font-extralight leading-[0.5em] text-[20px]">Trusted clients globally</p>
+          <h1 class="font-normal text-[40px] sm:text-[50px] md:text-[60px] lg:text-[70px]">10,000+</h1>
+          <p class="text-gray-700 font-extralight text-[16px] sm:text-[18px] md:text-[20px] leading-tight">Trusted clients globally</p>
         </div>
         <div>
-          <h1 class="font-normal text-[70px]">14+</h1>
-          <p class="text-gray-700 font-extralight leading-[0.5em] text-[20px]">Years of experience</p>
+          <h1 class="font-normal text-[40px] sm:text-[50px] md:text-[60px] lg:text-[70px]">14+</h1>
+          <p class="text-gray-700 font-extralight text-[16px] sm:text-[18px] md:text-[20px] leading-tight">Years of experience</p>
         </div>
       </div>
     </div>
+
     <div class="flex justify-center text-center">
-      <p class="font-extralight text-gray-700 text-[20px] leading-[1.5em] tracking-[0.05em]">
+      <p class="font-extralight text-gray-700 text-[16px] sm:text-[18px] md:text-[20px] leading-[1.5em] tracking-[0.05em]">
         Trusted by more than 12,000<br>
         financial company in 140 countries.
       </p>
     </div>
-    <div class="flex justify-center text-center mt-[40px] mb-[150px] font-medium">
-      <div class="flex-1 border-2 border-gray-400 px-[20px] py-[15px] text-center">Handelsblatt</div>
-      <div class="flex-1 border-2 border-gray-400 px-[20px] py-[15px] text-center">MONEY</div>
-      <div class="flex-1 border-2 border-gray-400 px-[20px] py-[15px] text-center">DIE ZEIT</div>
-      <div class="flex-1 border-2 border-gray-400 px-[20px] py-[15px] text-center">FONDS</div>
-      <div class="flex-1 border-2 border-gray-400 px-[20px] py-[15px] text-center">BORSE</div>
-      <div class="flex-1 border-2 border-gray-400 px-[20px] py-[15px] text-center">EXTRA</div>
-      <div class="flex-1 border-2 border-gray-400 px-[20px] py-[15px] text-center">Allurion</div>
+
+    <div class="flex flex-wrap justify-center text-center mt-10 mb-20 font-medium gap-4">
+      <div class="flex-1 min-w-[120px] max-w-[160px] border-2 border-gray-400 px-4 py-3">Handelsblatt</div>
+      <div class="flex-1 min-w-[120px] max-w-[160px] border-2 border-gray-400 px-4 py-3">MONEY</div>
+      <div class="flex-1 min-w-[120px] max-w-[160px] border-2 border-gray-400 px-4 py-3">DIE ZEIT</div>
+      <div class="flex-1 min-w-[120px] max-w-[160px] border-2 border-gray-400 px-4 py-3">FONDS</div>
+      <div class="flex-1 min-w-[120px] max-w-[160px] border-2 border-gray-400 px-4 py-3">BORSE</div>
+      <div class="flex-1 min-w-[120px] max-w-[160px] border-2 border-gray-400 px-4 py-3">EXTRA</div>
+      <div class="flex-1 min-w-[120px] max-w-[160px] border-2 border-gray-400 px-4 py-3">Allurion</div>
     </div>
   </section>
   <section class="flex flex-col">
-    <div class="justify-center text-center px-[150px] pt-[120px]">
-      <h2 class="text-[24px] font-normal text-gray-700">SERVICES</h2>
-      <h1 class="text-[80px] ">Our Financial Solutions</h1>
-      <p class="text-[20px] text-gray-700 font-extralight leading-[1.5em] mb-[15px]">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium corporis impedit itaque iure modi neque porro quos rerum <br>
+    <!-- Header -->
+    <div class="text-center px-4 sm:px-8 md:px-[80px] lg:px-[150px] pt-[80px] sm:pt-[100px]">
+      <h2 class="text-[20px] sm:text-[22px] font-normal text-gray-700">SERVICES</h2>
+      <h1 class="text-[36px] sm:text-[48px] md:text-[64px] lg:text-[80px] leading-tight">Our Financial Solutions</h1>
+      <p class="text-[16px] sm:text-[18px] md:text-[20px] text-gray-700 font-extralight leading-[1.6em] mb-6">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium corporis impedit itaque iure modi neque porro quos rerum
+        <br class="hidden md:inline">
         suscipit tenetur! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, quam Lorem.
       </p>
     </div>
-    <div class="flex justify-center px-[300px] py-[50px] gap-[10px]">
-      <div class="relative flex-1 border-[3px] border-gray-200 px-[20px] pt-[270px]">
-        <img class="absolute top-[20px] left-[20px] w-[50px] h-[50px] p-[6px] border-2 border-gray-400 rounded-full " src="images/icon-1.png" alt="">
-        <h2 class="font-semibold text-[22px]">Investment Management</h2>
-        <p class="font-normal text-[16px] text-gray-500">Investment strategics to meet your goals.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 sm:px-8 md:px-[80px] lg:px-[150px] py-[50px]">
+      <div class="relative border-[3px] border-gray-200 px-6 pt-[250px] pb-6 bg-white">
+        <img class="absolute top-[20px] left-[20px] w-[50px] h-[50px] p-[6px] border-2 border-gray-400 rounded-full" src="images/icon-1.png" alt="">
+        <h2 class="font-semibold text-[20px] sm:text-[22px]">Investment Management</h2>
+        <p class="font-normal text-[14px] sm:text-[16px] text-gray-500">Investment strategics to meet your goals.</p>
       </div>
-      <div class="relative flex-1 border-[3px] border-gray-200 px-[20px] py-[15px] pt-[270px]">
-        <img class="absolute top-[20px] left-[20px] w-[50px] h-[50px] border-2 border-gray-400 rounded-full " src="images/icon-2.jpg" alt="">
-        <h2 class="font-semibold text-[26px]">Retirement Planning</h2>
-        <p class="font-normal text-[16px] text-gray-500">Secure your financial future with expert.</p>
+
+      <div class="relative border-[3px] border-gray-200 px-6 pt-[250px] pb-6 bg-white">
+        <img class="absolute top-[20px] left-[20px] w-[50px] h-[50px] border-2 border-gray-400 rounded-full" src="images/icon-2.jpg" alt="">
+        <h2 class="font-semibold text-[20px] sm:text-[22px]">Retirement Planning</h2>
+        <p class="font-normal text-[14px] sm:text-[16px] text-gray-500">Secure your financial future with expert.</p>
       </div>
-      <div class="relative flex-1 border-[3px] border-gray-200 px-[20px] py-[15px] pt-[270px]">
-        <img class="absolute top-[20px] left-[20px] w-[50px] h-[50px] border-2 border-gray-400 rounded-full " src="images/icon-3.webp" alt="">
-        <h2 class="font-semibold text-[26px]">Estate Planing</h2>
-        <p class="font-normal text-[16px] text-gray-500">Protect and preserve your legacy</p>
+
+      <div class="relative border-[3px] border-gray-200 px-6 pt-[250px] pb-6 bg-white">
+        <img class="absolute top-[20px] left-[20px] w-[50px] h-[50px] border-2 border-gray-400 rounded-full" src="images/icon-3.webp" alt="">
+        <h2 class="font-semibold text-[20px] sm:text-[22px]">Estate Planning</h2>
+        <p class="font-normal text-[14px] sm:text-[16px] text-gray-500">Protect and preserve your legacy.</p>
       </div>
-      <div class="relative flex-1 border-[3px] border-gray-200 px-[20px] py-[15px] pt-[270px]">
-        <img class="absolute top-[20px] left-[20px] w-[50px] h-[50px] p-[6px] border-2 border-gray-400 rounded-full " src="images/icon-4'.jpg" alt="">
-        <h2 class="font-semibold text-[26px]">Tax Strategies</h2>
-        <p class="font-normal text-[16px] text-gray-500">Minimize taxes while maximizing growth.</p>
+
+      <div class="relative border-[3px] border-gray-200 px-6 pt-[250px] pb-6 bg-white">
+        <img class="absolute top-[20px] left-[20px] w-[50px] h-[50px] p-[6px] border-2 border-gray-400 rounded-full" src="images/icon-4'.jpg" alt="">
+        <h2 class="font-semibold text-[20px] sm:text-[22px]">Tax Strategies</h2>
+        <p class="font-normal text-[14px] sm:text-[16px] text-gray-500">Minimize taxes while maximizing growth.</p>
       </div>
     </div>
-    <div class="flex justify-center mb-[100px]">
-      <button class="border-2 border-gray-400 px-[30px] py-[10px] text-[17px]">
-        Explore Our Services <span class="ml-[15px]">⮕</span>
+
+    <div class="flex justify-center mb-[80px]">
+      <button class="border-2 border-gray-400 px-6 py-3 text-[16px] sm:text-[17px]">
+        Explore Our Services <span class="ml-3">⮕</span>
       </button>
     </div>
   </section>
+
   <section class="flex flex-col pt-[100px] bg-gray-950 text-white">
-    <div class="flex flex-col px-[150px] mb-[50px] justify-center text-center">
-      <h2 class="text-[20px] font-normal">BENEFITS</h2>
-      <h1 class="text-[70px]">Why Choose Us?</h1>
-      <p class="text-[20px] text-gray-400 font-extralight leading-[1.5em] mb-[15px]">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium corporis impedit itaque iure modi neque porro quos rerum <br>
+    <div class="text-center px-4 sm:px-10 lg:px-[150px] mb-[40px]">
+      <h2 class="text-[18px] sm:text-[20px] font-normal">BENEFITS</h2>
+      <h1 class="text-[36px] sm:text-[48px] lg:text-[70px] leading-tight">Why Choose Us?</h1>
+      <p class="text-[16px] sm:text-[18px] lg:text-[20px] text-gray-400 font-extralight leading-[1.6em] mb-6">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium corporis impedit itaque iure modi neque porro quos rerum
+        <br class="hidden lg:inline">
         suscipit tenetur! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, quam Lorem.
       </p>
     </div>
 
-    <div class="flex justify-between w-full items-stretch min-h-[700px]">
+    <div class="flex flex-col-reverse lg:flex-row justify-between w-full items-stretch min-h-[600px] gap-6 px-4 sm:px-10 lg:pl-[100px] pr-0">
 
-      <div class="w-1/2 ml-[100px] flex flex-col gap-[10px] pl-[50px] h-full justify-center">
-        <h2 class="text-[36px]">Investment strategies for every client.</h2>
-        <p class="text-[16px] text-gray-400 font-extralight leading-[1.5em] mb-[15px]">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium corporis impedit <br>
-          itaque iure modi neque porro quos rerum suscipit tenetur! Lorem ipsum dolor sit amet,<br>
-          consectetur adipisicing elit. Blanditiis, quam Lorem.
-        </p>
-        <div class="relative border-2 border-gray-700 w-[850px]">
-          <div class="absolute border-2 w-[400px] top-0 left-0"></div>
+      <div class="w-full lg:w-1/2 flex flex-col justify-center gap-8">
+        <div>
+          <h2 class="text-[24px] sm:text-[30px] lg:text-[36px]">Investment strategies for every client.</h2>
+          <p class="text-[14px] sm:text-[16px] text-gray-400 font-extralight leading-[1.6em] mt-2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium corporis impedit
+            itaque iure modi neque porro quos rerum suscipit tenetur! Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Blanditiis, quam Lorem.
+          </p>
+          <div class="border-2 border-gray-700 mt-4 w-full"></div>
         </div>
-        <h2 class="text-[36px]">Financial advisor to guide you through every step.</h2>
-        <p class="text-[16px] text-gray-400 font-extralight leading-[1.5em] mb-[15px]">
-          Read More
-        </p>
-        <div class="border-2 border-gray-700 w-[850px]"></div>
-        <h2 class="text-[36px]">Low fees, full transparency, and a proven track record.</h2>
-        <p class="text-[16px] text-gray-400 font-extralight leading-[1.5em] mb-[15px]">
-          Read More
-        </p>
-        <div class="border-2 border-gray-700 w-[850px]"></div>
-        <h2 class="text-[36px]">Access to top-performing investment opportunities.</h2>
-        <p class="text-[16px] text-gray-400 font-extralight leading-[1.5em] mb-[15px]">
-          Read More
-        </p>
-        <div class="border-2 border-gray-700 w-[850px]"></div>
+
+        <div>
+          <h2 class="text-[24px] sm:text-[30px] lg:text-[36px]">Financial advisor to guide you through every step.</h2>
+          <p class="text-[14px] sm:text-[16px] text-gray-400 font-extralight mt-2">Read More</p>
+          <div class="border-2 border-gray-700 mt-4 w-full"></div>
+        </div>
+
+        <div>
+          <h2 class="text-[24px] sm:text-[30px] lg:text-[36px]">Low fees, full transparency, and a proven track record.</h2>
+          <p class="text-[14px] sm:text-[16px] text-gray-400 font-extralight mt-2">Read More</p>
+          <div class="border-2 border-gray-700 mt-4 w-full"></div>
+        </div>
+
+        <div>
+          <h2 class="text-[24px] sm:text-[30px] lg:text-[36px]">Access to top-performing investment opportunities.</h2>
+          <p class="text-[14px] sm:text-[16px] text-gray-400 font-extralight mt-2">Read More</p>
+          <div class="border-2 border-gray-700 mt-4 w-full"></div>
+        </div>
       </div>
 
-      <div class="w-1/2 h-full">
-        <img class="m-0 p-0 w-full h-full object-cover brightness-50" src="images/benefits.jpg" alt="">
+      <div class="w-full lg:w-1/2 h-[300px] lg:h-auto flex justify-end pr-0">
+        <img class="w-full lg:w-[100%] h-full object-cover object-right brightness-50 ml-auto" src="images/benefits.jpg" alt="">
       </div>
     </div>
   </section>
-  <section class="flex flex-col pt-[150px] pl-[300px] ">
+
+  <section class="flex flex-col pt-[150px] pl-[20px] md:pl-[300px]">
     <div>
       <h3 class="font-normal text-[18px] text-gray-700">TESTIMONIALS</h3>
-      <h1 class="text-[60px]">What Our Clients Say</h1>
+      <h1 class="text-[40px] md:text-[60px]">What Our Clients Say</h1>
       <p class="font-normal text-[16px] text-gray-500">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque debitis ea harum illum incidunt <br>
         nesciunt repellat, Lorem ipsum dolor sit amet. soluta ut veritatis atque.
       </p>
     </div>
-    <div class="flex justify-end mt-[100px] gap-[30px]">
+
+    <div class="flex flex-col md:flex-row justify-center md:justify-end mt-[50px] md:mt-[100px] gap-[30px]">
+
       <div class="flex-1 flex flex-col border-2 border-gray-300 px-[35px] py-[20px] gap-[20px]">
         <div>⭐⭐⭐⭐⭐</div>
-        <h2  class=" font-semibold text-[30px] ">
+        <h2 class="font-semibold text-[24px] md:text-[30px]">
           Thanks to their guidance, I achieved my financial<br>
           goals and built a stable future for my family.
         </h2>
-        <div class="flex justify-start">
-          <div class="flex justify-start items-center gap-[20px] ">
-            <div>
-              <img class="w-[50px] h-[50px] object-cover rounded-full shadow-md" src="images/review.jpg" alt="">
-            </div>
+        <div class="flex flex-col sm:flex-row justify-start items-start sm:items-center">
+          <div class="flex items-center gap-[20px]">
+            <img class="w-[50px] h-[50px] object-cover rounded-full shadow-md" src="images/review.jpg" alt="">
             <div>
               <p class="text-[20px] text-gray-700">Sarah Tomas</p>
-              <p class="text-[16px] text-gray-500 ">Chief Executive Officer</p>
+              <p class="text-[16px] text-gray-500">Chief Executive Officer</p>
             </div>
           </div>
-          <div class="border-r-2 border-gray-300 mx-[30px]"></div>
-          <div class="flex justify-start items-center gap-[20px]">
-            <img class="w-[50px] h-auto rounded-full object-contain border-2 " src="images/video.png" alt="">
-            <p class="text-[20px] text-gray-500 ">Play Video</p>
+          <div class="hidden sm:block border-r-2 border-gray-300 mx-[30px] h-[40px]"></div>
+          <div class="flex items-center gap-[20px] mt-[20px] sm:mt-0">
+            <img class="w-[50px] h-auto rounded-full object-contain border-2" src="images/video.png" alt="">
+            <p class="text-[20px] text-gray-500">Play Video</p>
           </div>
         </div>
       </div>
-        <div class="opacity-50 flex-1 flex flex-col border-2 border-gray-300 px-[35px] py-[20px] gap-[20px]">
-          <div>⭐⭐⭐⭐⭐</div>
-          <h2  class=" font-semibold text-[30px] ">
-            Thanks to their guidance, I achieved my financial<br>
-            goals and built a stable future for my family.
-          </h2>
-          <div class="flex justify-start">
-            <div class="flex justify-start items-center gap-[20px] ">
-              <div>
-                <img class="w-[50px] h-[50px] object-cover rounded-full shadow-md" src="images/review.jpg" alt="">
-              </div>
-              <div>
-                <p class="text-[20px] text-gray-700">Sarah Tomas</p>
-                <p class="text-[16px] text-gray-500 ">Chief Executive Officer</p>
-              </div>
-            </div>
-            <div class="border-r-2 border-gray-300 mx-[30px]"></div>
-            <div class="flex justify-start items-center gap-[20px]">
-              <img class="w-[50px] h-auto rounded-full object-contain border-2 " src="images/video.png" alt="">
-              <p class="text-[20px] text-gray-500 ">Play Video</p>
+
+      <div class="opacity-50 flex-1 flex flex-col border-2 border-gray-300 px-[35px] py-[20px] gap-[20px]">
+        <div>⭐⭐⭐⭐⭐</div>
+        <h2 class="font-semibold text-[24px] md:text-[30px]">
+          Thanks to their guidance, I achieved my financial<br>
+          goals and built a stable future for my family.
+        </h2>
+        <div class="flex flex-col sm:flex-row justify-start items-start sm:items-center">
+          <div class="flex items-center gap-[20px]">
+            <img class="w-[50px] h-[50px] object-cover rounded-full shadow-md" src="images/review.jpg" alt="">
+            <div>
+              <p class="text-[20px] text-gray-700">Sarah Tomas</p>
+              <p class="text-[16px] text-gray-500">Chief Executive Officer</p>
             </div>
           </div>
+          <div class="hidden sm:block border-r-2 border-gray-300 mx-[30px] h-[40px]"></div>
+          <div class="flex items-center gap-[20px] mt-[20px] sm:mt-0">
+            <img class="w-[50px] h-auto rounded-full object-contain border-2" src="images/video.png" alt="">
+            <p class="text-[20px] text-gray-500">Play Video</p>
+          </div>
         </div>
+      </div>
+
     </div>
   </section>
   <div class="w-full flex justify-center mt-[100px] mb-[160px]">
@@ -259,105 +281,122 @@
       </div>
     </div>
   </div>
-  <section class="bg-gray-100 px-[150px] py-[50px]">
-    <div class="flex flex-col justify-center items-center text-center">
-      <p class="text-[20px] text-gray-500">INSIGHTS</p>
-      <h1 class="text-[70px]">
-        Stay Informed with the Lastest<br>
+  <section class="bg-gray-100 px-4 sm:px-8 md:px-16 lg:px-[150px] py-[50px]">
+    <div class="flex flex-col justify-center items-center text-center px-2">
+      <p class="text-[18px] sm:text-[20px] text-gray-500">INSIGHTS</p>
+      <h1 class="text-[32px] sm:text-[40px] md:text-[50px] lg:text-[70px] font-semibold leading-tight">
+        Stay Informed with the Latest<br class="hidden sm:block">
         Financial Insights
       </h1>
     </div>
-    <div class="flex gap-[30px]">
-      <div class="flex flex-col my-[30px]">
-        <img class="brightness-80 grayscale-25 w-[1090px] h-auto py-[20px]" src="images/Barometer.jpg" alt="">
-        <p class="text-[20px] text-gray-700">
+
+    <div class="flex flex-col lg:flex-row gap-[30px] mt-[40px]">
+
+      <div class="flex flex-col flex-none lg:flex-[1.9] my-[20px]">
+        <img class="brightness-80 grayscale-25 w-full h-auto py-[20px] rounded-lg" src="images/Barometer.jpg" alt="">
+        <p class="text-[16px] sm:text-[18px] md:text-[20px] text-gray-700">
           Macroeconomics - 08 Jan 2025
         </p>
-        <h2 class="text-[40px] font-medium">Barometer: Sticking with Stocks</h2>
+        <h2 class="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[40px] font-medium">
+          Barometer: Sticking with Stocks
+        </h2>
       </div>
-      <div class="flex flex-col my-[30px]">
-        <img class="brightness-80 grayscale-25 w-[470px] h-auto py-[20px]" src="images/billecart.webp" alt="">
-        <p class="text-[20px] text-gray-700">
+
+      <div class="flex flex-col flex-none lg:flex-[1.6] my-[20px]">
+        <img class="brightness-80 grayscale-25 w-full h-auto py-[20px] rounded-lg" src="images/billecart.webp" alt="">
+        <p class="text-[16px] sm:text-[18px] md:text-[20px] text-gray-700">
           Family Business - 06 Jan 2025
         </p>
-        <h2 class="text-[40px] font-medium">Antoine Roland-Billecart Ripe for Success</h2>
+        <h2 class="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[40px] font-medium">
+          Antoine Roland-Billecart Ripe for Success
+        </h2>
       </div>
-      <div class="flex flex-col my-[30px]">
-        <img class="brightness-80 grayscale-25 w-[750px] h-[580px] overflow-hidden object-cover py-[20px]" src="images/house.webp" alt="">
-        <p class="text-[20px] text-gray-700">
+
+      <div class="flex flex-col flex-none lg:flex-[1.5] my-[20px]">
+        <img class="brightness-80 grayscale-25 w-full h-[300px] md:h-[400px] lg:h-[580px] object-cover py-[20px] rounded-lg" src="images/house.webp" alt="">
+        <p class="text-[16px] sm:text-[18px] md:text-[20px] text-gray-700">
           Macroeconomics - 23 Dec 2024
         </p>
-        <h2 class="text-[40px] font-medium">Weekly house view Central Bank Divergence</h2>
+        <h2 class="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[40px] font-medium">
+          Weekly house view Central Bank Divergence
+        </h2>
       </div>
     </div>
+
     <div>
-      <div class="border-2 border-gray-400 w-[200px] mx-auto mt-[20px] mb-[80px] py-[10px] text-center">
+      <div class="border-2 border-gray-400 w-fit px-6 py-3 mx-auto mt-[30px] mb-[60px] text-center text-[16px] sm:text-[18px] hover:bg-gray-300 transition duration-200 cursor-pointer rounded">
         More Insights →
       </div>
     </div>
   </section>
-  <section class="flex flex-col my-[150px] justify-center items-center text-center">
-    <div class="flex">
+
+
+  <section class="flex flex-col my-[150px] justify-center items-center text-center px-4 lg:max-w-6xl mx-auto">
+    <div class="flex items-center gap-3 mb-4">
       <img class="w-[50px] h-auto" src="images/capital%20logo.jpg" alt="">
-      <h2 class="font-normal text-[22px]">Sky Capital</h2>
+      <h2 class="font-normal text-[20px] sm:text-[22px]">Sky Capital</h2>
     </div>
-    <h1 class="text-[50px] font-medium">
-      We are a full-service financial company founders<br>
+
+    <h1 class="text-[32px] sm:text-[40px] md:text-[50px] font-medium leading-snug max-w-screen-lg">
+      We are a full-service financial company founders<br class="hidden sm:block">
       trust to create products that become verbs
     </h1>
-    <div class="flex gap-[20px] mt-[30px]">
-      <button class="text-[18px] bg-blue-500 text-white px-[40px] py-[10px]">
+
+    <div class="flex flex-wrap justify-center gap-[15px] sm:gap-[20px] mt-[30px]">
+      <button class="text-[16px] sm:text-[18px] bg-blue-500 text-white px-[30px] py-[10px]">
         Get Started Today
       </button>
-      <button class="text-[18px]  px-[40px] py-[10px] border-2 border-gray-300">
+      <button class="text-[16px] sm:text-[18px] px-[30px] py-[10px] border-2 border-gray-300">
         📄 Download Free Investment Guide
       </button>
     </div>
   </section>
+
 </main>
 <footer class="bg-gray-950 text-white">
-  <div class="flex justify-between px-[150px] py-[100px] ">
-    <div class="flex flex-col gap-[10px]">
-      <h1 class="text-[26px] mb-[5px]">Our Company</h1>
-      <a class="font-light text-[18px] text-gray-400" href="#">Who We Are</a>
-      <a class="font-light text-[18px] text-gray-400" href="#">Our Team</a>
-      <a class="font-light text-[18px] text-gray-400" href="#">Careers</a>
-      <a class="font-light text-[18px] text-gray-400" href="#">Contact Us</a>
+  <div class="flex flex-wrap justify-between gap-y-10 px-4 lg:px-[150px] py-[100px]">
+    <div class="flex flex-col gap-[10px] min-w-[200px]">
+      <h1 class="text-[22px] lg:text-[26px] mb-[5px]">Our Company</h1>
+      <a class="font-light text-[16px] lg:text-[18px] text-gray-400" href="#">Who We Are</a>
+      <a class="font-light text-[16px] lg:text-[18px] text-gray-400" href="#">Our Team</a>
+      <a class="font-light text-[16px] lg:text-[18px] text-gray-400" href="#">Careers</a>
+      <a class="font-light text-[16px] lg:text-[18px] text-gray-400" href="#">Contact Us</a>
     </div>
-    <div class="flex flex-col gap-[10px]">
-      <h1 class="text-[26px] mb-[5px]">Wealth Management</h1>
-      <a class="font-light text-[18px] text-gray-400" href="#">Alternative Investments</a>
-      <a class="font-light text-[18px] text-gray-400" href="#">Australian Equities</a>
-      <a class="font-light text-[18px] text-gray-400" href="#">International Equities</a>
-      <a class="font-light text-[18px] text-gray-400" href="#">Private Equity</a>
-      <a class="font-light text-[18px] text-gray-400" href="#">Forelgn Exchange</a>
-      <a class="font-light text-[18px] text-gray-400" href="#">Fixed Income</a>
+    <div class="flex flex-col gap-[10px] min-w-[200px]">
+      <h1 class="text-[22px] lg:text-[26px] mb-[5px]">Wealth Management</h1>
+      <a class="font-light text-[16px] lg:text-[18px] text-gray-400" href="#">Alternative Investments</a>
+      <a class="font-light text-[16px] lg:text-[18px] text-gray-400" href="#">Australian Equities</a>
+      <a class="font-light text-[16px] lg:text-[18px] text-gray-400" href="#">International Equities</a>
+      <a class="font-light text-[16px] lg:text-[18px] text-gray-400" href="#">Private Equity</a>
+      <a class="font-light text-[16px] lg:text-[18px] text-gray-400" href="#">Forelgn Exchange</a>
+      <a class="font-light text-[16px] lg:text-[18px] text-gray-400" href="#">Fixed Income</a>
     </div>
-    <div class="flex flex-col gap-[10px]">
-      <h1 class="text-[26px] mb-[5px]">Advisory Services</h1>
-      <a class="font-light text-[18px] text-gray-400" href="#">Capital Markets</a>
-      <a class="font-light text-[18px] text-gray-400" href="#">Investment Capabilities</a>
-      <a class="font-light text-[18px] text-gray-400" href="#">Settlement & Custody</a>
-      <a class="font-light text-[18px] text-gray-400" href="#">How To Invest</a>
+    <div class="flex flex-col gap-[10px] min-w-[200px]">
+      <h1 class="text-[22px] lg:text-[26px] mb-[5px]">Advisory Services</h1>
+      <a class="font-light text-[16px] lg:text-[18px] text-gray-400" href="#">Capital Markets</a>
+      <a class="font-light text-[16px] lg:text-[18px] text-gray-400" href="#">Investment Capabilities</a>
+      <a class="font-light text-[16px] lg:text-[18px] text-gray-400" href="#">Settlement & Custody</a>
+      <a class="font-light text-[16px] lg:text-[18px] text-gray-400" href="#">How To Invest</a>
     </div>
-    <div class="flex flex-col gap-[10px]">
-      <h1 class="text-[26px] mb-[5px]">Important Links</h1>
-      <a class="font-light text-[18px] text-gray-400" href="#">Perspectives</a>
-      <a class="font-light text-[18px] text-gray-400" href="#">Book Consultation</a>
-      <a class="font-light text-[18px] text-gray-400" href="#">Investor Login</a>
-      <a class="font-light text-[18px] text-gray-400" href="#">Open Account</a>
+    <div class="flex flex-col gap-[10px] min-w-[200px]">
+      <h1 class="text-[22px] lg:text-[26px] mb-[5px]">Important Links</h1>
+      <a class="font-light text-[16px] lg:text-[18px] text-gray-400" href="#">Perspectives</a>
+      <a class="font-light text-[16px] lg:text-[18px] text-gray-400" href="#">Book Consultation</a>
+      <a class="font-light text-[16px] lg:text-[18px] text-gray-400" href="#">Investor Login</a>
+      <a class="font-light text-[16px] lg:text-[18px] text-gray-400" href="#">Open Account</a>
     </div>
-    <div class="flex flex-col gap-[10px]">
-      <h1 class="text-[26px] mb-[5px]">Head Office</h1>
-      <p
-              class="font-light text-[18px] text-gray-400">Level 34 Corporate Building A 125 Main<br>
-              Street City, State, Zipcode Country
+    <div class="flex flex-col gap-[10px] min-w-[200px]">
+      <h1 class="text-[22px] lg:text-[26px] mb-[5px]">Head Office</h1>
+      <p class="font-light text-[16px] lg:text-[18px] text-gray-400">
+        Level 34 Corporate Building A 125 Main<br>
+        Street City, State, Zipcode Country
       </p>
-      <p class="font-light text-[18px] text-gray-400" >+1 234 0235 0235</p>
-      <p class="font-light text-[18px] text-gray-400">Info@skycap.com</p>
+      <p class="font-light text-[16px] lg:text-[18px] text-gray-400">+1 234 0235 0235</p>
+      <p class="font-light text-[16px] lg:text-[18px] text-gray-400">Info@skycap.com</p>
     </div>
   </div>
-  <div class="flex justify-start px-[150px] pb-[30px] gap-[50px] text-[20px]">
+
+  <div class="flex flex-wrap justify-start px-4 lg:px-[150px] pb-[30px] gap-x-[30px] gap-y-2 text-[16px] lg:text-[20px]">
     <a href="#">Teams & Conditions</a>
     <a href="#">Privacy Policy</a>
     <a href="#">Regulatory Affillations</a>
@@ -365,23 +404,26 @@
     <a href="#">Complaints</a>
     <a href="#">Fraud Alerts</a>
   </div>
-  <div class="px-[150px]">
-    <p class="pb-[20px] font-light text-[16px] text-gray-400" >
+
+  <div class="px-4 lg:px-[150px]">
+    <p class="pb-[20px] font-light text-[14px] lg:text-[16px] text-gray-400">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi harum id perferendis rerum velit. Culpa dolore eum labore maiores placeat!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, consequatur dolorum illo nostrum quae quod quos tenetur voluptas? Aliquam aliquid blanditiis, consectetur dolor dolore dolorem eum illum impedit incidunt ipsum iste iure libero magnam modi obcaecati odio officiis perspiciatis.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, consequatur dolorum illo nostrum quae quod quos tenetur voluptas?
+      Aliquam aliquid blanditiis, consectetur dolor dolore dolorem eum illum impedit incidunt ipsum iste iure libero magnam modi obcaecati
+      odio officiis perspiciatis.
     </p>
-    <p class="pb-[50px] font-light text-[16px] text-gray-400" >
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi harum id perferendis rerum velit. Culpa dolore eum labore maiores placeat!
+    <p class="pb-[50px] font-light text-[14px] lg:text-[16px] text-gray-400">
+      orem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi harum id perferendis rerum velit. Culpa dolore eum labore maiores placeat!
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, consequatur dolorum illo nostrum quae quod quos tenetur voluptas? Aliquam aliquid blanditiis, consectetur dolor dolore dolorem eum illum impedit incidunt ipsum iste iure libero magnam modi obcaecati odio officiis perspiciatis.
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam magni optio. Accusantium adipisci aspernatur assumenda cum cupiditate distinctio ducimus eum ex iure minus nesciunt officiis perspiciatis, voluptatem.
     </p>
   </div>
-  <div class="border-t border-gray-800 "></div>
 
-  <div class="flex justify-center items-center p-[20px] text-[20px] text-gray-300">
-    <p>Copyright @ Sky Capital. 2006 - 2025.All Rights Reserved.</p>
+  <div class="border-t border-gray-800"></div>
+
+  <div class="flex justify-center items-center p-[20px] text-[14px] lg:text-[20px] text-gray-300 text-center px-4">
+    <p>Copyright © Sky Capital. 2006 - 2025. All Rights Reserved.</p>
   </div>
 </footer>
-
 </body>
 </html>
