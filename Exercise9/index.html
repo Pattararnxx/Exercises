@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="src/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quotes</title>
+  <script src="src/script.js" defer></script>
+</head>
+
+<body class="p-4 sm:p-10 md:p-20">
+<div class="flex flex-col border-b-2 pb-6 sm:pb-10">
+  <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold">Random Quote</h1>
+  <div class="flex flex-col mt-3 p-5 sm:p-10 gap-4 border-2 rounded-2xl">
+    <div class="flex flex-col gap-6 sm:gap-10">
+      <p id="randomTxt" class="text-lg sm:text-xl md:text-2xl font-normal">Lorem Ipsum ...</p>
+      <p id="randomAuth" class="text-lg sm:text-xl md:text-2xl font-normal">by ....</p>
+    </div>
+    <button id="randomBtn" class="self-end group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md border border-neutral-200 bg-transparent px-6 font-medium text-neutral-600 transition-all duration-100 [box-shadow:5px_5px_rgb(82_82_82)] active:translate-x-[3px] active:translate-y-[3px] active:[box-shadow:0px_0px_rgb(82_82_82)]">
+      Random
+    </button>
+  </div>
+</div>
+
+<div class="flex flex-col sm:flex-row sm:justify-between items-start sm:items-end mt-10 gap-6">
+  <div class="flex flex-col gap-2">
+    <label for="selectPage" class="text-base sm:text-lg md:text-xl font-medium">Item per page</label>
+    <select id="selectPage" class="border-2 px-6 py-2 rounded-md">
+      <option value="5" selected>5</option>
+      <option value="10">10</option>
+      <option value="20">20</option>
+    </select>
+  </div>
+  <div id="numPage" class="flex flex-wrap gap-2"></div>
+</div>
+
+<div id="quotes" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6 sm:mt-10"></div>
+</body>
+</html>
