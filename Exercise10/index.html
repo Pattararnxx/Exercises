@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="https://styleshit-pokedex.netlify.app/static/media/pokeball.8b0d0c2b.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Pokédex</title>
+  <link rel="stylesheet" href="src/style.css" />
+  <script src="src/script.js" defer></script>
+  <style>
+    dialog::backdrop {
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    dialog[open] {
+      position: fixed;
+      inset: auto;
+      left: 50%;
+      bottom: 0;
+      border-radius: 3rem;
+      transform: translateX(-50%);
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen relative">
+
+<div class="fixed inset-0 bg-repeat bg-left-top opacity-30 -z-10" style="background-image: url('images/bg.jpeg'); background-size: auto;"></div>
+
+<header class=" pt-20 font-bold text-7xl w-full text-neutral-700 z-10 relative">
+  <div class="flex items-baseline justify-center">
+    <h1>P</h1>
+    <img class="w-10 h-auto" src="https://styleshit-pokedex.netlify.app/static/media/pokeball.8b0d0c2b.svg" alt="" />
+    <h1><span class="inline-block border-b-8 border-red-500 pb-4">kéd</span>ex</h1>
+  </div>
+</header>
+<main class="z-10 relative flex flex-col items-center">
+  <div class="inline-block mx-auto text-center my-20">
+    <h2 class=" font-bold text-4xl text-indigo-400 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] mb-10">Select Generation:</h2>
+    <div class="flex gap-15 bg-white px-6 py-3 rounded shadow drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">
+      <button class="gen-btn text-lg font-bold border-b-4 border-blue-600 text-black pb-1" data-gen="1">I</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black pb-1" data-gen="2">II</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black pb-1" data-gen="3">III</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black pb-1" data-gen="4">IV</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black pb-1" data-gen="5">V</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black pb-1" data-gen="6">VI</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black pb-1" data-gen="7">VII</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black pb-1" data-gen="8">VIII</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black pb-1" data-gen="9">IX</button>
+    </div>
+    <nav class="mt-10 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">
+      <ul class="inline-flex -space-x-px text-base h-10">
+          <!--Java Script-->
+      </ul>
+    </nav>
+    <div class="flex justify-center">
+      <div class="flex flex-col mt-10 space-y-2 w-60">
+        <label for="pages" class="text-lg font-semibold text-gray-700">Items per page</label>
+        <select name="pages" id="pages" class="p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2  focus:border-indigo-500 bg-white text-gray-800">
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="50" selected>50</option>
+        </select>
+      </div>
+      <div class="flex flex-col justify-center items-center mt-20 mx-6">
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" id="toggleDark" class="sr-only peer">
+          <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-indigo-500 rounded-full peer dark:bg-gray-700 peer-checked:bg-indigo-600 transition duration-300"></div>
+          <div class="absolute left-0.5 top-0.5 w-5 h-5 bg-white rounded-full shadow transform peer-checked:translate-x-full transition duration-300"></div>
+        </label>
+      </div>
+
+    </div>
+  </div>
+  <div id="pokemonCard" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 p-16">
+    <!--Java Script-->
+  </div>
+</main>
+<dialog id="pokemonDialog">
+  <button id="closeDialog" class="absolute z-100 top-4 left-4 text-white text-6xl">
+    ←
+  </button>
+  <div id="content">
+    <!--Java Script-->
+  </div>
+</dialog>
+
+</body>
+</html>
