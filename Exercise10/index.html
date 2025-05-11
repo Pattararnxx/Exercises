@@ -4,6 +4,11 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="https://styleshit-pokedex.netlify.app/static/media/pokeball.8b0d0c2b.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="src/script.js" defer></script>
   <title>Pokédex</title>
@@ -67,6 +72,7 @@
           <!--Java Script-->
       </ul>
     </nav>
+
     <div class="flex justify-center">
       <div class="flex flex-col mt-10 space-y-2 w-60">
         <label for="pages" class="text-lg font-semibold text-gray-700 dark:text-gray-200">Items per page</label>
@@ -110,6 +116,8 @@
     <!--Java Script-->
   </div>
 </dialog>
-
+<div id="loading-spinner" class="fixed inset-0 z-50 bg-white bg-opacity-70 flex items-center justify-center hidden">
+  <div class="pokemon relative w-[100px] h-[100px]"></div>
+</div>
 </body>
 </html>
