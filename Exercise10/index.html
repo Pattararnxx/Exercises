@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="https://styleshit-pokedex.netlify.app/static/media/pokeball.8b0d0c2b.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="src/script.js" defer></script>
   <title>Pokédex</title>
   <link rel="stylesheet" href="src/style.css" />
-  <script src="src/script.js" defer></script>
   <style>
     dialog::backdrop {
       background: rgba(0, 0, 0, 0.5);
@@ -18,36 +18,49 @@
       inset: auto;
       left: 50%;
       bottom: 0;
-      border-radius: 3rem;
+      border-radius: 3rem 3rem 0 0;
       transform: translateX(-50%);
       box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+      width: 90%;
+      max-width: 1000px;
+      max-height: 100vh;
+      padding: 0;
+      margin: 0;
+    }
+
+    @media (min-width: 768px) {
+      dialog[open] {
+        border-radius: 3rem;
+        bottom: 0;
+        top: auto;
+        transform: translateX(-50%);
+      }
     }
   </style>
 </head>
-<body class="min-h-screen relative">
+<body class="min-h-screen transition-colors duration-500 bg-white text-black dark:bg-gray-900 dark:text-white">
+<div class="fixed inset-0 bg-repeat bg-left-top opacity-30 dark:opacity-15 -z-10" style="background-image: url('images/bg.jpeg'); background-size: auto;"></div>
 
-<div class="fixed inset-0 bg-repeat bg-left-top opacity-30 -z-10" style="background-image: url('images/bg.jpeg'); background-size: auto;"></div>
-
-<header class=" pt-20 font-bold text-7xl w-full text-neutral-700 z-10 relative">
+<header class="pt-20 font-bold text-4xl sm:text-5xl md:text-7xl w-full text-neutral-700 dark:text-white z-10 relative">
   <div class="flex items-baseline justify-center">
     <h1>P</h1>
-    <img class="w-10 h-auto" src="https://styleshit-pokedex.netlify.app/static/media/pokeball.8b0d0c2b.svg" alt="" />
+    <img class="w-7 h-auto object-contain md:w-10" src="https://styleshit-pokedex.netlify.app/static/media/pokeball.8b0d0c2b.svg" alt="" />
     <h1><span class="inline-block border-b-8 border-red-500 pb-4">kéd</span>ex</h1>
   </div>
 </header>
 <main class="z-10 relative flex flex-col items-center">
   <div class="inline-block mx-auto text-center my-20">
-    <h2 class=" font-bold text-4xl text-indigo-400 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] mb-10">Select Generation:</h2>
-    <div class="flex gap-15 bg-white px-6 py-3 rounded shadow drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">
-      <button class="gen-btn text-lg font-bold border-b-4 border-blue-600 text-black pb-1" data-gen="1">I</button>
-      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black pb-1" data-gen="2">II</button>
-      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black pb-1" data-gen="3">III</button>
-      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black pb-1" data-gen="4">IV</button>
-      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black pb-1" data-gen="5">V</button>
-      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black pb-1" data-gen="6">VI</button>
-      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black pb-1" data-gen="7">VII</button>
-      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black pb-1" data-gen="8">VIII</button>
-      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black pb-1" data-gen="9">IX</button>
+    <h2 class="font-bold text-4xl text-indigo-400 dark:text-indigo-300 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] mb-10">Select Generation:</h2>
+    <div class="flex flex-wrap gap-15 bg-white dark:bg-gray-800 px-6 py-3 rounded shadow drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="1">I</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="2">II</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1">III</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="4">IV</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="5">V</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="6">VI</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="7">VII</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="8">VIII</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="9">IX</button>
     </div>
     <nav class="mt-10 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">
       <ul class="inline-flex -space-x-px text-base h-10">
@@ -56,32 +69,44 @@
     </nav>
     <div class="flex justify-center">
       <div class="flex flex-col mt-10 space-y-2 w-60">
-        <label for="pages" class="text-lg font-semibold text-gray-700">Items per page</label>
-        <select name="pages" id="pages" class="p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2  focus:border-indigo-500 bg-white text-gray-800">
+        <label for="pages" class="text-lg font-semibold text-gray-700 dark:text-gray-200">Items per page</label>
+        <select name="pages" id="pages" class="p-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:border-indigo-500 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200">
           <option value="10">10</option>
           <option value="20">20</option>
           <option value="50" selected>50</option>
         </select>
       </div>
       <div class="flex flex-col justify-center items-center mt-20 mx-6">
-        <label class="relative inline-flex items-center cursor-pointer">
-          <input type="checkbox" id="toggleDark" class="sr-only peer">
-          <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-indigo-500 rounded-full peer dark:bg-gray-700 peer-checked:bg-indigo-600 transition duration-300"></div>
-          <div class="absolute left-0.5 top-0.5 w-5 h-5 bg-white rounded-full shadow transform peer-checked:translate-x-full transition duration-300"></div>
-        </label>
+        <div class="flex flex-col sm:flex-row justify-center items-center dark:bg-gray-800 rounded-lg space-y-2 sm:space-y-0 sm:space-x-2">
+        <button id="theme-toggle-light" class="theme-toggle h-10 w-10 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all" title="Light mode">
+            <svg class="w-6 h-6 fill-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          <button id="theme-toggle-dark" class="theme-toggle h-10 w-10 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all" title="Dark mode">
+            <svg class="w-6 h-6 fill-violet-700" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+          </button>
+          <button id="theme-toggle-system" class="theme-toggle h-10 w-10 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all" title="System preference">
+            <svg class="w-6 h-6 fill-gray-700 dark:fill-gray-300" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
       </div>
 
     </div>
   </div>
-  <div id="pokemonCard" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 p-16">
+  <div id="pokemonCard" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 p-16 ">
     <!--Java Script-->
   </div>
 </main>
-<dialog id="pokemonDialog">
-  <button id="closeDialog" class="absolute z-100 top-4 left-4 text-white text-6xl">
+<dialog id="pokemonDialog" class="dark:bg-gray-800">
+  <button id="closeDialog" class="absolute z-100 top-2 left-2 sm:top-4 sm:left-4 text-white text-4xl sm:text-6xl">
     ←
   </button>
-  <div id="content">
+  <div id="content" class="dark:text-white">
     <!--Java Script-->
   </div>
 </dialog>
