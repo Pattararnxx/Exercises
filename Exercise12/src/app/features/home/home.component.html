@@ -1,0 +1,59 @@
+<body class="min-h-screen transition-colors duration-500 bg-white text-black dark:bg-gray-900 dark:text-white">
+<div class="fixed inset-0 -z-10 bg-left-top bg-repeat [background-image:url('/bg.jpeg')] bg-[length:auto] opacity-30"></div>
+
+<header class="pt-20 font-bold text-4xl sm:text-5xl md:text-7xl w-full text-neutral-700 dark:text-white z-10 relative">
+  <div class="flex items-baseline justify-center">
+    <h1>P</h1>
+    <img class="w-7 h-auto object-contain md:w-10"
+         src="https://styleshit-pokedex.netlify.app/static/media/pokeball.8b0d0c2b.svg" alt=""/>
+    <h1><span class="inline-block border-b-8 border-red-500 pb-4">kéd</span>ex</h1>
+  </div>
+</header>
+<main class="z-10 relative flex flex-col items-center">
+  <div class="inline-block mx-auto text-center my-20">
+    <h2 class="font-bold text-4xl text-indigo-400 dark:text-indigo-300 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] mb-10">Select Generation:</h2>
+    <div class="flex flex-wrap gap-15 bg-white dark:bg-gray-800 px-6 py-3 rounded shadow drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="1">I</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="2">II</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1">III</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="4">IV</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="5">V</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="6">VI</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="7">VII</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="8">VIII</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="9">IX</button>
+    </div>
+
+  </div>
+  <div id="pokemonCard" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 p-16 ">
+    <a *ngFor="let pokemon of pokemons"
+       [routerLink]="['/pokemon', pokemon.id]"
+       class="h-[250px] sm:h-[300px] md:h-[400px] rounded-2xl shadow-lg pl-4 sm:pl-8 md:pl-15 flex justify-between relative overflow-hidden transition-all duration-300 hover:scale-105 cursor-pointer"
+       [ngStyle]="{ background:
+            pokemon.type.includes('Fire') ? 'linear-gradient(135deg, #FB6C6C, #FBA26C)' :
+            pokemon.type.includes('Water') ? 'linear-gradient(135deg, #30A7D7, #62B9D7)' :
+            'linear-gradient(135deg, #48D0B0, #A8B820)'
+        }">
+      <div class="z-10 pt-4 sm:pt-8 md:pt-15 w-[40%]">
+        <h2 class="text-white text-xl sm:text-3xl md:text-5xl font-extrabold mb-2 sm:mb-5 md:mb-10 capitalize">{{ pokemon.name }}</h2>
+        <div *ngFor="let t of pokemon.type">
+          <div class="mb-2" >
+            <span class="inline-block bg-[rgba(255,255,255,0.3)] text-white text-sm sm:text-xl md:text-2xl font-normal px-2 sm:px-3 md:px-5 py-1 sm:py-2 rounded-full">
+              {{ t }}
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="z-10 w-[50%] flex justify-center items-center">
+        <img [src]="pokemon.image" alt="" class="w-full h-auto max-h-[150px] sm:max-h-[200px] md:max-h-[300px] object-contain" />
+      </div>
+      <p class="absolute top-1 sm:top-2 md:top-3 right-2 sm:right-3 md:right-5 text-white text-2xl sm:text-4xl md:text-6xl font-normal opacity-20">
+        #{{ pokemon.id | number:'3.0-0' }}
+      </p>
+      <img class="z-0 absolute -bottom-5 sm:-bottom-10 md:-bottom-15 -right-5 opacity-30 sm:-right-10 md:-right-15 w-[100px] sm:w-[200px] md:w-[300px] h-auto"
+           src="/pokeball.png" alt="">
+
+    </a>
+  </div>
+</main>
+</body>
