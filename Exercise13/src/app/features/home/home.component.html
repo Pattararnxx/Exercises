@@ -27,12 +27,17 @@
   <div id="pokemonCard" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 p-16 ">
     <a *ngFor="let pokemon of pokemonList()"
        [routerLink]="['/pokemon', pokemon.id]"
-       class="h-[250px] sm:h-[300px] md:h-[400px] rounded-2xl shadow-lg pl-4 sm:pl-8 md:pl-15 flex justify-between relative overflow-hidden transition-all duration-300 hover:scale-105 cursor-pointer"
-       [ngStyle]="{ background:
-            pokemon.type.includes('Fire') ? 'linear-gradient(135deg, #FB6C6C, #FBA26C)' :
-            pokemon.type.includes('Water') ? 'linear-gradient(135deg, #30A7D7, #62B9D7)' :
-            'linear-gradient(135deg, #48D0B0, #A8B820)'
-        }">
+       class="h-[250px] sm:h-[300px] md:h-[400px] rounded-2xl shadow-lg pl-4 flex justify-between relative overflow-hidden transition-all duration-300 hover:scale-105 cursor-pointer"
+       [style.background]="
+      (pokemon.type && pokemon.type.length ?
+        (pokemon.type[0].toLowerCase() === 'fire' ? 'linear-gradient(135deg, #FB6C6C, #FBA26C)' :
+         pokemon.type[0].toLowerCase() === 'water' ? 'linear-gradient(135deg, #30A7D7, #62B9D7)' :
+         pokemon.type[0].toLowerCase() === 'grass' ? 'linear-gradient(135deg, #48D0B0, #A8B820)' :
+         'linear-gradient(135deg, #bababa, #888)'
+        )
+      : 'linear-gradient(135deg, #bababa, #888)'
+    )"
+    >
       <div class="z-10 pt-4 sm:pt-8 md:pt-15 w-[40%]">
         <h2 class="text-white text-xl sm:text-3xl md:text-5xl font-extrabold mb-2 sm:mb-5 md:mb-10 capitalize">{{ pokemon.name }}</h2>
         <div *ngFor="let t of pokemon.type || []">
