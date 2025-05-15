@@ -1,0 +1,46 @@
+<div *ngIf="pokemon" class="min-h-screen flex items-center justify-center px-6">
+  <div class="w-full max-w-screen-lg p-10 sm:p-14 text-center transition-colors duration-300">
+    <img [src]="pokemon.image" [alt]=""
+         class="w-60 sm:w-72 md:w-80 h-auto mx-auto drop-shadow-lg mb-6" />
+
+    <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mt-4 text-gray-800 dark:text-white capitalize">
+      {{ pokemon.name }}
+    </h2>
+
+    <div class="mt-6 flex justify-center gap-4 flex-wrap">
+      <span *ngFor="let t of pokemon.type"
+            class="px-6 py-2 rounded-full text-lg font-semibold text-white shadow-md"
+            [ngStyle]="{
+              background:
+                t === 'Fire' ? '#FB6C6C' :
+                t === 'Water' ? '#30A7D7' :
+                t === 'Grass' ? '#48D0B0' :
+                '#999'
+            }">
+        {{ t }}
+      </span>
+    </div>
+
+    <!--Button create by adamgiebl-->
+    <button
+      [routerLink]="['/']"
+      class="z-100 mt-10 text-white font-black px-12 py-4 rounded-md border-b-2
+         transition-all duration-300
+         bg-gradient-to-b from-indigo-500 to-indigo-400
+         border-b-indigo-400
+         shadow-[0_40px_29px_rgba(99,102,241,0.2)]
+         [transform-style:preserve-3d]
+         [perspective:200px]
+         hover:[transform:rotateX(30deg)_translateY(2px)]
+         active:[transform:rotateX(36deg)_translateY(5px)]
+         [transform:rotateX(15deg)]"
+      style="font-size: 16px; cursor: pointer;"
+    >
+      Back to Home
+    </button>
+
+  </div>
+</div>
+
+
+
