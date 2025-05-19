@@ -5,6 +5,9 @@ import {HomeComponent} from './features/home/home.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'pokemon/:id', component: AboutComponent },
+  {
+    path: 'pokemon/:id',
+    component: AboutComponent
+  },
   { path: '**', component: PageNotFoundComponent }
 ];
