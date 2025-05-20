@@ -1,1 +1,47 @@
-<router-outlet></router-outlet>
+<main class="z-0 min-h-screen flex flex-col md:flex-row justify-center gap-8 px-4 py-6 md:px-8 md:py-10 bg-white text-black dark:bg-gray-800 dark:text-white">
+  <section class="w-full md:w-[20%] border-2 rounded-2xl dark:border-gray-200">
+    <div class="flex flex-col justify-between h-full p-6 md:p-8 font-medium text-xl md:text-2xl dark:text-white">
+      <button routerLink="/pokemon"
+              routerLinkActive="bg-emerald-500 text-white border-emerald-600"
+              [routerLinkActiveOptions]="{exact: true}"
+              class="mt-6 md:mt-8 border-2 py-5 md:py-6 rounded-2xl
+              hover:bg-emerald-500 hover:text-white
+              transition-colors duration-200">
+        Pokemon
+      </button>
+      <button *ngIf="hasToken(); else loginTemplate"
+              routerLink="/profile"
+              routerLinkActive="bg-emerald-500 text-white border-emerald-600"
+              [routerLinkActiveOptions]="{exact: true}"
+              class="mt-6 md:mt-8 border-2 py-5 md:py-6 rounded-2xl flex items-center gap-5 px-10 bg-emerald-500 text-white border-emerald-600">
+        <img [src]="getProfileImage()" class="w-8 h-8 rounded-full" alt="avatar" />
+        <span class="text-xl truncate">{{ getUserName() }}</span>
+      </button>
+      <ng-template #loginTemplate>
+        <button routerLink="/login"
+                routerLinkActive="bg-emerald-500 text-white border-emerald-600"
+                [routerLinkActiveOptions]="{exact: true}"
+                class="border-2 py-5 md:py-6 rounded-2xl
+                 hover:bg-emerald-500 hover:text-white
+                 transition-colors duration-200 mt-6 md:mt-0">
+          Login
+        </button>
+      </ng-template>
+
+      <ng-template #login>
+        <button #login routerLink="/login"
+                routerLinkActive="bg-emerald-500 text-white border-emerald-600"
+                [routerLinkActiveOptions]="{exact: true}"
+                class="border-2 py-5 md:py-6 rounded-2xl
+              hover:bg-emerald-500 hover:text-white
+              transition-colors duration-200 mt-6 md:mt-0">
+          Login
+        </button>
+      </ng-template>
+    </div>
+  </section>
+
+  <section class="relative w-full md:w-[80%] border-2 rounded-2xl dark:border-gray-200 overflow-auto max-h-[calc(100vh-80px)]">
+    <router-outlet></router-outlet>
+  </section>
+</main>

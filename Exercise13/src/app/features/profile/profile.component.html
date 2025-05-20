@@ -1,0 +1,17 @@
+<div class="h-full w-full px-4 py-8 md:p-10">
+  <h1 class="my-4 md:ml-14 font-medium text-2xl">Profile</h1>
+  <div class="flex flex-col items-center">
+    @if(profile()?.image; as image){
+      <img class="w-28 h-28 md:w-44 md:h-44 object-cover rounded-full" [src]="image" alt="">
+    }
+    <h2 class="text-xl font-normal mt-3 text-center">{{ profile()?.firstName + ' ' + profile()?.lastName }}</h2>
+    <p class="text-gray-500 mb-3">{{ '# ' + profile()?.id }}</p>
+  </div>
+  <div class="flex flex-col gap-4 mt-8 md:ml-14 font-medium text-lg">
+    <p>Username: <span class="font-normal break-all">{{ profile()?.username }}</span></p>
+    <p>Email: <span class="font-normal break-all">{{ profile()?.email }}</span></p>
+    <p>Firstname: <span class="font-normal">{{ profile()?.firstName }}</span></p>
+    <p>Lastname: <span class="font-normal">{{ profile()?.lastName }}</span></p>
+    <p>Gender: <span class="font-normal">{{ profile()?.gender }}</span></p>
+  </div>
+</div>

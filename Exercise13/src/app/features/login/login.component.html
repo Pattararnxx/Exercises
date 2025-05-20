@@ -1,0 +1,22 @@
+<form [formGroup]="fg" (submit)="onSubmit()"
+      class="flex flex-col items-center gap-5 w-full h-full justify-center px-4 text-xl sm:text-2xl font-light">
+
+  <input type="text" name="username" autocomplete="off" placeholder="Username" formControlName="username"
+         class="w-full sm:w-[80%] md:w-[60%] lg:w-[40%]
+                border-2 border-gray-500 bg-white dark:text-black
+                px-6 py-3 rounded-lg text-center"
+  >
+
+  <input type="password" name="password" autocomplete="off" placeholder="Password" formControlName="password"
+         class="w-full sm:w-[80%] md:w-[60%] lg:w-[40%]
+                border-2 border-gray-500 bg-white dark:text-black
+                px-6 py-3 rounded-lg text-center"
+  >
+
+  <button type="submit"
+          class="w-full sm:w-[80%] md:w-[60%] lg:w-[30%]
+                 mt-2 border-2 border-black bg-black
+                 px-6 py-4 rounded-lg text-center font-bold text-white
+                 hover:bg-gray-800 transition-colors duration-200">Login</button>
+
+</form>
