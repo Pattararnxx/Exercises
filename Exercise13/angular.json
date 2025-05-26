@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Exercise13": {
+    "exercise13": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Exercise13:build:production"
+              "buildTarget": "exercise13:build:production"
             },
             "development": {
-              "buildTarget": "Exercise13:build:development"
+              "buildTarget": "exercise13:build:development"
             }
           },
           "defaultConfiguration": "development"
