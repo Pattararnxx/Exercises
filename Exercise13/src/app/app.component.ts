@@ -10,26 +10,12 @@ import {AuthService} from './core/services/auth/auth.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  #authService = inject(AuthService);
-  firstName = signal<string>('');
-
   hasToken(): boolean {
     return !!localStorage.getItem('access_token');
   }
 
-  constructor() {
-    this.#authService.getMyProfile().subscribe({
-      next: (profile) => {
-        this.firstName.set(profile.first_name);
-      },
-      error: (err) => {
-        console.error('Failed to load profile', err);
-      }
-    });
-  }
-
   getFirstName(): string {
-    return this.firstName();
+    return localStorage.getItem('username') || '';
   }
 
 }

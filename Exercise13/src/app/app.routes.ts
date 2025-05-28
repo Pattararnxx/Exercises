@@ -9,8 +9,8 @@ import {authGuard} from './core/guards/auth.guard';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'pokemon', component: PokemonComponent },
-  { path: 'pokemon/:id', component: AboutComponent },
+  { path: 'pokemon', component: PokemonComponent , canActivate: [authGuard]},
+  { path: 'pokemon/:id', component: AboutComponent, canActivate: [authGuard] },
   { path: 'login', component: LoginComponent },
   { path:'profile', component:ProfileComponent, canActivate: [authGuard] },
   { path: '**', component: PageNotFoundComponent }
