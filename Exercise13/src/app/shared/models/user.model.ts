@@ -1,11 +1,6 @@
 export interface User {
-  accessToken: string
-  refreshToken: string
-  id: number
-  username: string
+  access_token: string
   email: string
-  firstName: string
-  lastName: string
-  gender: string
-  image: string
+  first_name: string
+  last_name: string
 }

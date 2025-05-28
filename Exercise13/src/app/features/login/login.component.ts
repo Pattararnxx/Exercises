@@ -28,9 +28,8 @@ export class LoginComponent {
       next:(res)=>{
         console.log('logged in');
         console.log(res);
-        localStorage.setItem('access_token',res.accessToken);
-        localStorage.setItem('username', res.username);
-        localStorage.setItem('image', res.image);
+        localStorage.setItem('access_token',res.access_token);
+        localStorage.setItem('username', res.email);
         this.#router.navigate(['/profile']).then();
       },
       error:(err)=>{

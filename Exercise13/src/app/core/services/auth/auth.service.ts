@@ -1,6 +1,7 @@
 import {inject, Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {User} from '../../../shared/models/user.model';
+import {tap} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,16 +10,24 @@ export class AuthService {
 
   #http = inject(HttpClient);
 
-  login(username: string, password: string){
-    return this.#http.post<User>('https://dummyjson.com/auth/login', {
-      username,
+  login(email: string, password: string){
+    return this.#http.post<User>('http://localhost:3000/auth/login', {
+      email,
       password,
-      expiresInMins: 60
-    }
-    );
+    }).pipe(
+        tap(response => {
+          localStorage.setItem('access_token', response.access_token);
+        })
+      );
   }
 
   getMyProfile(){
-    return this.#http.get<User>('https://dummyjson.com/auth/me')
+    const token = localStorage.getItem('access_token') || '';
+    const headers = new HttpHeaders({ Authorization: `Bearer ${token}` });
+    return this.#http.get<User>('http://localhost:3000/auth/profile',{headers});
+  }
+
+  logout() {
+    localStorage.removeItem('access_token');
   }
 }
