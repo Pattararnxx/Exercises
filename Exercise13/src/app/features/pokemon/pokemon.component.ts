@@ -1,5 +1,5 @@
 import {Component, inject, signal} from '@angular/core';
-import {DecimalPipe, NgForOf, NgStyle} from "@angular/common";
+import {DecimalPipe, NgForOf} from "@angular/common";
 import {RouterLink} from '@angular/router';
 import {ApiService} from '../../shared/services/api/api.service';
 import {Pokemon} from '../../shared/models/pokemon.model';
@@ -49,5 +49,35 @@ export class PokemonComponent {
         console.log('failed to load pokemon', err);
       }
     });
+  }
+
+  loadGen(limit:number, offset:number){
+    this.apiService.getPokemon(limit,offset).subscribe({
+      next: response => {
+        const pokemon = response.results.map((p,index) => {
+          const id = offset + index + 1;
+          return {
+            id: id,
+            name: p.name,
+            image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`,
+            type: []
+          };
+        })
+        this.pokemonList.set(pokemon);
+
+        pokemon.forEach((p,index) =>{
+          this.apiService.getPokemonById(p.id).subscribe({
+            next:(detail:any) =>{
+              const typeUpdate = [...this.pokemonList()];
+              typeUpdate[index].type = detail.types.map((t: { type: { name: string } })=> t.type.name);
+              this.pokemonList.set(typeUpdate);
+            }
+          })
+        })
+      },
+      error: (err) => {
+        console.log('failed to load pokemon', err);
+      }
+    })
   }
 }

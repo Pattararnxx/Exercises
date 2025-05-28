@@ -4,7 +4,7 @@
   <div class="flex items-baseline justify-center">
     <h1 class="inline-flex">P
       <img class="w-7 h-auto object-contain md:w-10"
-               src="https://styleshit-pokedex.netlify.app/static/media/pokeball.8b0d0c2b.svg" alt=""/>
+               src="https://styleshit-pokedex.netlify.app/static/media/pokeball.8b0d0c2b.svg" alt="" loading="lazy"/>
       <span class="inline-block border-b-8 border-red-500 pb-4">kéd</span>ex
     </h1>
   </div>
@@ -13,15 +13,15 @@
   <div class="inline-block mx-auto text-center my-20">
     <h2 class="font-bold text-4xl text-indigo-400 dark:text-indigo-300 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] mb-10">Select Generation:</h2>
     <nav class="flex flex-wrap gap-15 bg-white dark:bg-gray-800 px-6 py-3 rounded shadow drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">
-      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="1">I</button>
-      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="2">II</button>
-      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1">III</button>
-      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="4">IV</button>
-      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="5">V</button>
-      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="6">VI</button>
-      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="7">VII</button>
-      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="8">VIII</button>
-      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" data-gen="9">IX</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" (click)="loadGen(151, 0)">I</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" (click)="loadGen(100, 151)">II</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" (click)="loadGen(135, 251)">III</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" (click)="loadGen(107, 386)">IV</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" (click)="loadGen(156, 493)">V</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" (click)="loadGen(72, 649)">VI</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" (click)="loadGen(88, 721)">VII</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" (click)="loadGen(96, 809)">VIII</button>
+      <button class="gen-btn text-lg font-bold border-b-4 border-transparent text-black dark:text-white pb-1" (click)="loadGen(120, 905)">IX</button>
     </nav>
 
   </div>
@@ -59,12 +59,12 @@
         </div>
       </div>
       <div class="z-10 w-[50%] flex justify-center items-center">
-        <img [src]="pokemon.image" alt="" class="w-full h-auto max-h-[150px] sm:max-h-[200px] md:max-h-[300px] object-contain" />
+        <img [src]="pokemon.image" loading="lazy" alt="" class="w-full h-auto max-h-[150px] sm:max-h-[200px] md:max-h-[300px] object-contain" />
       </div>
       <p class="absolute top-1 sm:top-2 md:top-3 right-2 sm:right-3 md:right-5 text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal opacity-20">
         #{{ pokemon.id | number:'3.0-0' }}
       </p>
-      <img class="z-0 absolute -bottom-5 sm:-bottom-10 md:-bottom-15 -right-5 opacity-30 sm:-right-10 md:-right-15 w-[100px] sm:w-[200px] md:w-[300px] h-auto"
+      <img loading="lazy" class="z-0 absolute -bottom-5 sm:-bottom-10 md:-bottom-15 -right-5 opacity-30 sm:-right-10 md:-right-15 w-[100px] sm:w-[200px] md:w-[300px] h-auto"
            src="/pokeball.png" alt="">
 
     </a>
